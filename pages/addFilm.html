@@ -1,0 +1,40 @@
+<div class="bd-example">  
+    <div class="row g-2">
+        <div class="col-md-5">
+            <label for="idTitle" class="form-label mb-1">Título (*)</label>
+            <input type="text" id="idTitle" class="form-control" autocomplete="off" placeholder="Ingrese título..." aria-label="Apellido y Nombre">
+            <div id="idMsgTitle" class="form-text erroMessage mt-0 hidden"></div>
+        </div>            
+        <div class="col-sm-8 col-md-4">
+            <label for="idYear" class="form-label mb-1">Año (*)</label>
+            <input type="text" id="idYear" class="form-control" placeholder="Ingrese año..." aria-label="E-mail">
+            <div id="idMsgYear" class="form-text erroMessage mt-0 hidden"></div>
+        </div>
+        <div class="col-sm-4 col-md-3">
+            <label for="idType" class="form-label mb-1">Tipo (*)</label>
+            <select id="idSelectType" class="form-select" >
+                <option selected="-1" value="-1">Seleccione...</option>
+                <option value="movie">Movie</option>
+                <option value="serie">Serie</option>
+            </select>
+            <div id="idMsgSelectType" class="form-text erroMessage mt-0 hidden"></div>
+        </div>         
+    </div>
+    <br>
+    <div class="row g-2">
+        <div class="col-md-12">
+            <div class="form-floating">
+                <textarea style="height: 200px;" class="form-control" placeholder="Leave a comment here" id="idDescTextarea"></textarea>
+                <label for="idDescTextarea">Descrición de la Pelicula</label>
+              </div>
+              <div id="idMsgDesc" class="form-text erroMessage mt-0 hidden"></div>
+        </div>      
+    </div>
+    <hr>
+    <div class="text-center">
+        <button type="button" id="btnAddFilm" onclick="saveFilm()" class="btn btn-success"></button>
+        <button type="button" id="btnBack" onclick="cancel()" class="btn btn-primary"></button>
+    </div>  
+    
+</div>
+   

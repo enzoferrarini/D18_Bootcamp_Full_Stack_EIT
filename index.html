@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Desafío N° 18</title>
+</head>
+<body>     
+    <nav class="navbar navbar-expand bd-example d-flex flex-column">       
+        <div class="flex__container" style="width: 100%;">
+            <div class="d-flex flex-column align-items-center">           
+                <img src="./img/eit.svg" alt="Logo EIT"> 
+                <a class="nav-link titilante fs-4 text-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Instrucciones</a>           
+            </div>
+            <div class="display-6 text-secondary">
+                <strong>Películas </strong>Store
+            </div>
+        </div>
+        
+        
+    </nav>
+    <main>
+        <!-- CONTENIDO DE LA SPA -->
+    </main>
+    <div class="bd-example p-2">       
+        <div class="text-secondary  text-center">Desarrollado con <strong>Bootstrap 5</strong> - FERRARINI ENZO</div>
+    </div>
+    <!-- TOAST -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" id="toastPlacement">
+        <div class="toast fade hide"  data-bs-autohide="true" data-bs-delay="5000" id="myToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="darkblue"></rect></svg>
+            
+                <strong class="me-auto">Mensaje</strong>
+                <small class="text-muted">ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-start" id="idMsgToast">
+            </div>
+        </div>
+        <div class="toast fade hide"  data-bs-autohide="false" id="myToastConfirm" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="darkblue"></rect></svg>
+            
+                <strong class="me-auto">Mensaje</strong>
+                <small class="text-muted">ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body text-start" id="idMsgToastConfirm">   
+                <div id="idMsgToastConfirmDiv"></div>             
+                <div class="mt-2 pt-2 border-top">
+                  <button type="button" onclick="confirmDelete()" class="btn btn-primary btn-sm">Confirmar</button>
+                  <button type="button" onclick="cancelDelete()" class="btn btn-secondary btn-sm" data-bs-dismiss="toast">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title " id="exampleModalLabel">Instrucciones Generales</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>- Las <strong>peliculas</strong> de cargan automáticamente y son almacenadas en el Local Storage
+                    dentro de la variable <strong>films</strong>. Verificar que ya posea una variable en Local Storage 
+                    con el mismo nombre. En tal caso, elimínela y recargue el sitio.
+                </p>
+                <p>- Para <strong>buscar</strong> una película solo deberá ingresar parte del título, y automáticamente
+                    se mostraran los resultados. En el menú de los años, solo podrá seleccionar años
+                    existentes de peliculas existentes.
+                </p>
+                <p>- Para ver el detalle completo de una pelicula, basta con hacer <strong>Click en la Fila de 
+                    la pelicula</strong> que desea visualizar.
+                </p>
+                <p>- Tanto para <strong>editar</strong> o <strong>eliminar</strong> una pelicula, basta con pulsar en las opciones de la grilla
+                </p>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./js/validations.js"></script>
+    <script src="./js/filmsStore.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/films.js"></script>  
+    
+</body>
+</html>
